@@ -2,8 +2,8 @@ require('@nomiclabs/hardhat-ethers')
 require('@nomiclabs/hardhat-etherscan')
 require('@nomiclabs/hardhat-waffle')
 require('hardhat-deploy')
-// require('solidity-coverage')
-// require('hardhat-gas-reporter')
+require('solidity-coverage')
+require('hardhat-gas-reporter')
 // require('hardhat-contract-sizer')
 require('dotenv').config()
 
@@ -26,6 +26,9 @@ module.exports = {
       blockConfirmations : 6,
     }
   }, 
+  gasReporter : {
+    enabled  : false,
+  },
   namedAccounts : {
     deployer : {
       default : 0
